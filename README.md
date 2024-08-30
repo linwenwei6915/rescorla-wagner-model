@@ -1,15 +1,8 @@
 # rescorla-wagner-model
-This repository contains the Stan code and accompanying Python scripts for a behavioral analysis model. The model is based on a Rescorla-Wagner learning framework and is used to analyze decision-making behavior across different conditions in a psychological experiment. The model incorporates parameters related to bias, learning rates (alpha), and choice sensitivity (beta), and accounts for trial data from multiple subjects and conditions.
+This repository contains the Stan code and accompanying Python scripts for a behavioral analysis model. The model is based on a Rescorla-Wagner learning framework and is used to analyze learning behavior across different conditions in a human conditioning experiment. The model incorporates parameters such as bias, learning rates (alpha), and choice sensitivity (beta), and accounts for trial data from multiple subjects and conditions. The bias terms expresses to what extent does the count (a trial-by-trial data collected in the conditioning task which inteferes the subject's choice) influences the probability of the subject to choose the choice option (indicator) with a foreign interference.
 
 ### Model Overview
 The Stan model (rw_mcmc.stan) is structured as follows:
-
-#### Hierarchical Model Structure
-
-Below is the structure of the hierarchical model used in this analysis:
-
-![Hierarchical Model Structure](images/hierarchical_model_structure.png)
-
 
 #### Data Block
 The model expects data on the number of subjects, trials, and conditions, along with arrays for choice, reward, and count data.
